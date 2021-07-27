@@ -40,7 +40,7 @@ You can now, open the folder with ``cd [project-name]`` and run the command ``np
 Storyboard successfully generated! [11ms] 🎍
 ```
 If it's the case, you're ready to create your storyboard!
-#### Next step -> [OSBX Concepts](https://github.com/S-Traut/osbx/wiki/Concepts)
+#### Next step -> [OSBX Concepts](installation.md)
 
 ## Manual installation (not recommended)
 
