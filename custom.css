@@ -1,0 +1,20 @@
+#sidebar::before {
+  content: '';
+  background-image: var(--logo_url);
+  background-position: left;
+  width: 260px;
+  height: 80px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  margin-left: 20px;
+}
+
+.sidebar-scrollbox {
+  top: 80px !important;
+  padding: 0px 10px !important;
+}
+
+.chapter {
+  margin: 0 !important;
+}
