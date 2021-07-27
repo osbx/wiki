@@ -1,0 +1,12 @@
+[book]
+authors = ["osbx"]
+language = "en"
+multilingual = false
+src = "src"
+title = "osbx wiki"
+
+[output.html]
+additional-css = ["custom.css"]
+additional-js = ["custom.js"]
+git-repository-url = "https://github.com/osbx"
+git-repository-icon = "fa-github"
