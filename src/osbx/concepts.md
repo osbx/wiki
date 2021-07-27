@@ -1,10 +1,10 @@
 # OSBX Concepts
 
-Here is the documentation about the core concepts and technical specifications of OSBX. I highly recommend following the [OSB File extension](https://github.com/S-Traut/osbx/wiki/OSB) guide to understand this page with more ease, the OSB guide is focusing on the .osb file structure to help you understand how does osu storyboards works. Consider this as a "global" tutorial page.
+Here is the documentation about the core concepts and technical specifications of OSBX. I highly recommend following the [OSB File extension](concepts.md) guide to understand this page with more ease, the OSB guide is focusing on the .osb file structure to help you understand how does osu storyboards works. Consider this as a "global" tutorial page.
 
 ## Introduction to OSBX (A bit of history)
 
-So you've installed OSBX on your computer and now you are ready to create the future great storyboard of osu! But before that, i'd like to explain you the core idea behind OSBX and its history. I've been using (storybrew)[https://github.com/Damnae/storybrew] since the beginning of my storyboarding career, it's a powerful tool to create storyboards and probably way better than osbx. I loved using it for making my projects but for me it's time to move forward and create my own tool to make storyboards.
+So you've installed OSBX on your computer and now you are ready to create the future great storyboard of osu! But before that, i'd like to explain you the core idea behind OSBX and its history. I've been using [https://github.com/Damnae/storybrew](storybrew) since the beginning of my storyboarding career, it's a powerful tool to create storyboards and probably way better than osbx. I loved using it for making my projects but for me it's time to move forward and create my own tool to make storyboards.
 
 There is 2 main reasons why I decided to create my own tool:
 - On April 2021 I've entirely switched my computer Operating systems from Windows to Linux, and unfortunately, storybrew wasn't running on Linux, even with some wine configurations.
