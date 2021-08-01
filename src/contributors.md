@@ -1,6 +1,2 @@
 # Contributors
-
-Here is a list of the contributors who have helped improving osbx.
-
-- PoNo ([S-Traut](https://github.com/S-Traut/))
-- [Zerss](https://github.com/Zerss/)
+### [PoNo](https://github.com/S-Traut/) | [Zerss](https://github.com/Zerss/) | [You?](https://github.com/osbx/osbx#contributing)
