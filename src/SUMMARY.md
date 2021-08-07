@@ -14,5 +14,6 @@
 
 - [Storyboarding in general](storyboard/index.md)
   - [The mindset behind storyboarding](storyboard/storyboarding.md)
-  - [design tab & .osb file structure](storyboard/osb.md)
+  - [Design tab & .osb file structure](storyboard/osb.md)
+  - [Advanced storyboard techniques](storyboard/osb_advanced.md)
 
