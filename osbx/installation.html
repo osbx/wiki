@@ -147,44 +147,62 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="osbx-installation"><a class="header" href="#osbx-installation">OSBX Installation</a></h1>
-<p>OSBX core generator is a npm package that can be found on <a href="https://www.npmjs.com/package/osbx">npmJS</a> but the installation process is made easier using the osbx-cli npm package, which is a basic command line interface to help you creating your projects and manage them.</p>
+                        <h1 id="osbx-installation"><a class="header" href="#osbx-installation">osbx Installation</a></h1>
+<p>The osbx core generator is a npm package that can be found on
+<a href="https://www.npmjs.com/package/osbx">npmJS</a> but the installation process is
+made easier using the osbx-cli npm package, which is a basic command line
+interface to help you creating your projects and manage them.</p>
 <h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
 <p>You're gonna need few dependencies to run an osbx project properly:</p>
-<pre><code>= BASIC DEPENDENCIES =
-- nodeJS &amp; npm (both comes together) =&gt; https://nodejs.org/en/
-- git =&gt; https://git-scm.com/
-- A text editor such as VSCode (recommended), VIM, emacs, sublimetext ...
-
-= NPM DEPENDENCIES =
-Once you have installed node &amp; npm you have to run the next command to run the project properly:
-$ npm i -g osbx-cli nodemon ts-node
-
-osbx-cli is the CLI that I talked about. 
-Nodemon is a npm package to run local server that watch for your file modifications.
-ts-node is the typescript &gt; javascript compiler for nodeJS, this is required to execute your project into node.
+<h3 id="basic-dependencies"><a class="header" href="#basic-dependencies">Basic dependencies</a></h3>
+<ul>
+<li><a href="https://nodejs.org/en/">NodeJS and NPM</a> (both comes together)</li>
+<li><a href="https://git-scm.com/">Git</a></li>
+<li>A text editor such as VSCode (recommended), Vim, Emacs, SublimeText ...</li>
+</ul>
+<h3 id="npm-dependencies"><a class="header" href="#npm-dependencies">NPM dependencies</a></h3>
+<p>Once you have installed node and npm, you will have to run the next command to
+run the project properly:</p>
+<pre><code>$ npm i -g osbx-cli nodemon ts-node
 </code></pre>
+<p>osbx-cli is the CLI that I talked about.</p>
+<p>Nodemon is a npm package to run local server that watch for your file
+modifications.</p>
+<p>ts-node is the TypeScript-to-JavaScript compiler for nodeJS, this is required
+to execute your project into node.</p>
 <h2 id="installing-with-osbx-cli"><a class="header" href="#installing-with-osbx-cli">Installing with osbx-cli</a></h2>
-<p>Once every dependency is correctly installed, you can try to run the follow command: <code>osbx create-project</code>, this will ask you some information to complete to generate your new osbx project! Answer the questions, also choose generate base component if you're not familiar with osbx yet. Your command prompt should look like this after filling up all the information:</p>
-<p><img src="https://i.imgur.com/lVKC8s7.png" alt="" /></p>
-<p>The last question will ask you to choose the beatmap folder, copy the direct link to your beatmap folder where you want to generate your storyboard.</p>
-<p>After his work done, you should be able to see your new osbx project folder created, yay!</p>
-<p>You can now, open the folder with <code>cd [project-name]</code> and run the command <code>npm run storyboard</code> if everything is fine, you should see a message like:</p>
+<p>Once every dependency is correctly installed, you can try to run the following
+command</p>
+<pre><code>$ osbx create-project
+</code></pre>
+<p>This will ask you some information to complete to generate your new osbx
+project! Answer the questions, also choose generate base component if you're
+not familiar with osbx yet. Your command prompt should look like this after
+filling up all the information:</p>
+<center><img src="https://i.imgur.com/lVKC8s7.png" /></center>
+<p>The last question will ask you to choose the beatmap folder, copy the direct
+link to your beatmap folder where you want to generate your storyboard.</p>
+<p>After his work done, you should be able to see your new osbx project folder
+created, congratulations!</p>
+<p>You can now, open the folder with <code>cd [project-name]</code> and run the command
+<code>npm run storyboard</code>. If everything is fine, you should see a message like:</p>
 <pre><code>### STARTING NEW BUILD ###
 🟢 [Main]: Component successfully built!
 
 Storyboard successfully generated! [11ms] 🎍
 </code></pre>
-<p>If it's the case, you're ready to create your storyboard!</p>
-<h4 id="next-step---a-hrefinstallationhtmlosbx-conceptsa"><a class="header" href="#next-step---a-hrefinstallationhtmlosbx-conceptsa">Next step -&gt; <a href="installation.html">OSBX Concepts</a></a></h4>
+<p>If it's the case, you're now ready to create your first storyboard using
+<code>osbx</code>!</p>
 <h2 id="manual-installation-not-recommended"><a class="header" href="#manual-installation-not-recommended">Manual installation (not recommended)</a></h2>
-<p>If you want to create an osbx project with your own project structure it's possible by just installing the osbx package in a new created folder. You can create your own plugin &amp; component class containing the following structure:</p>
+<p>If you want to create an osbx project with your own project structure, it's
+possible by just installing the osbx package in a new created folder. You can
+create your own plugin &amp; component class containing the following structure:</p>
 <pre><code class="language-ts">// PLUGIN FILE
 import Plugin from &quot;osbx/lib/core/plugin&quot;;
 
 class osbx_core extends Plugin {
     plugin_function() {
-        // Code ...
+        // ...
     }
 }
 
@@ -196,11 +214,14 @@ import Component from &quot;osbx/lib/core/component&quot;;
 
 export default class Main extends Component {
     public Generate() {
-        
+        // ...
     }
 }
 </code></pre>
-<p>With these both files, you can add a main.ts file which will use the function Generator::MakeStoryboard() and load a component array in the parameters.</p>
+<p>You will see later what plugins and components are, for now, just copy the
+content of these files.</p>
+<p>With these both files, you can add a main.ts file which will use the function
+Generator::MakeStoryboard() and load a component array in the parameters.</p>
 <pre><code class="language-ts">// main.ts file
 import package_file = require(&quot;./package.json&quot;);
 import Generator from &quot;osbx/lib/core/generator&quot;;
@@ -222,6 +243,7 @@ const COMPONENTS = [
 
 Generator.MakeStoryboard(COMPONENTS, package_file.config.beatmap_path, start_time);
 </code></pre>
+<p>You're now ready to get started!</p>
 
                     </main>
 

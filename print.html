@@ -148,49 +148,81 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>Welcome to the osbx wiki!</p>
+                        <h1 id="osbx-wiki"><a class="header" href="#osbx-wiki">osbx wiki</a></h1>
+<p>Welcome to the osbx wiki!</p>
+<p>In this wiki, you will find plenty of resources to learn about the featured
+tool <code>osbx</code>. If you are not yet comfortable with the <code>.osb</code> file format,
+there is also documentation about storyboarding in general. You can find
+everything you need on the left sidebar.</p>
+<p><strong>Warning</strong>: This wiki is still work in progress, if you're
+interested in contributing, please refer to the <a href="https://github.com/osbx/wiki/">GitHub
+repository</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="contributors"><a class="header" href="#contributors">Contributors</a></h1>
-<h3 id="a-hrefhttpsgithubcoms-trautponoa--a-hrefhttpsgithubcomzersszerssa--a-hrefhttpsgithubcomosbxosbxcontributingyoua"><a class="header" href="#a-hrefhttpsgithubcoms-trautponoa--a-hrefhttpsgithubcomzersszerssa--a-hrefhttpsgithubcomosbxosbxcontributingyoua"><a href="https://github.com/S-Traut/">PoNo</a> | <a href="https://github.com/Zerss/">Zerss</a> | <a href="https://github.com/osbx/osbx#contributing">You?</a></a></h3>
+<h3 id="a-hrefhttpsgithubcoms-trautponoa--a-hrefhttpsgithubcomballasizerssa--a-hrefhttpsgithubcomosbxosbxcontributingyoua"><a class="header" href="#a-hrefhttpsgithubcoms-trautponoa--a-hrefhttpsgithubcomballasizerssa--a-hrefhttpsgithubcomosbxosbxcontributingyoua"><a href="https://github.com/S-Traut/">PoNo</a> | <a href="https://github.com/Ballasi/">Zerss</a> | <a href="https://github.com/osbx/osbx#contributing">You?</a></a></h3>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getting-started"><a class="header" href="#getting-started">Getting started</a></h1>
-<p>Let's get started on your osbx journey.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="osbx-installation"><a class="header" href="#osbx-installation">OSBX Installation</a></h1>
-<p>OSBX core generator is a npm package that can be found on <a href="https://www.npmjs.com/package/osbx">npmJS</a> but the installation process is made easier using the osbx-cli npm package, which is a basic command line interface to help you creating your projects and manage them.</p>
+<p>Let's get started on your osbx journey! In this category, we'll talk about
+<code>osbx</code>.</p>
+<p>We will learn how to set up a workspace and how you can use this tool. You
+will also learn about the concept of components and plugins and understand
+how they work together to make your storyboard scalable. Finally, we will
+help you create your very first plugin using osbx and see how you can join
+the community and collaborate!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="osbx-installation"><a class="header" href="#osbx-installation">osbx Installation</a></h1>
+<p>The osbx core generator is a npm package that can be found on
+<a href="https://www.npmjs.com/package/osbx">npmJS</a> but the installation process is
+made easier using the osbx-cli npm package, which is a basic command line
+interface to help you creating your projects and manage them.</p>
 <h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
 <p>You're gonna need few dependencies to run an osbx project properly:</p>
-<pre><code>= BASIC DEPENDENCIES =
-- nodeJS &amp; npm (both comes together) =&gt; https://nodejs.org/en/
-- git =&gt; https://git-scm.com/
-- A text editor such as VSCode (recommended), VIM, emacs, sublimetext ...
-
-= NPM DEPENDENCIES =
-Once you have installed node &amp; npm you have to run the next command to run the project properly:
-$ npm i -g osbx-cli nodemon ts-node
-
-osbx-cli is the CLI that I talked about. 
-Nodemon is a npm package to run local server that watch for your file modifications.
-ts-node is the typescript &gt; javascript compiler for nodeJS, this is required to execute your project into node.
+<h3 id="basic-dependencies"><a class="header" href="#basic-dependencies">Basic dependencies</a></h3>
+<ul>
+<li><a href="https://nodejs.org/en/">NodeJS and NPM</a> (both comes together)</li>
+<li><a href="https://git-scm.com/">Git</a></li>
+<li>A text editor such as VSCode (recommended), Vim, Emacs, SublimeText ...</li>
+</ul>
+<h3 id="npm-dependencies"><a class="header" href="#npm-dependencies">NPM dependencies</a></h3>
+<p>Once you have installed node and npm, you will have to run the next command to
+run the project properly:</p>
+<pre><code>$ npm i -g osbx-cli nodemon ts-node
 </code></pre>
+<p>osbx-cli is the CLI that I talked about.</p>
+<p>Nodemon is a npm package to run local server that watch for your file
+modifications.</p>
+<p>ts-node is the TypeScript-to-JavaScript compiler for nodeJS, this is required
+to execute your project into node.</p>
 <h2 id="installing-with-osbx-cli"><a class="header" href="#installing-with-osbx-cli">Installing with osbx-cli</a></h2>
-<p>Once every dependency is correctly installed, you can try to run the follow command: <code>osbx create-project</code>, this will ask you some information to complete to generate your new osbx project! Answer the questions, also choose generate base component if you're not familiar with osbx yet. Your command prompt should look like this after filling up all the information:</p>
-<p><img src="https://i.imgur.com/lVKC8s7.png" alt="" /></p>
-<p>The last question will ask you to choose the beatmap folder, copy the direct link to your beatmap folder where you want to generate your storyboard.</p>
-<p>After his work done, you should be able to see your new osbx project folder created, yay!</p>
-<p>You can now, open the folder with <code>cd [project-name]</code> and run the command <code>npm run storyboard</code> if everything is fine, you should see a message like:</p>
+<p>Once every dependency is correctly installed, you can try to run the following
+command</p>
+<pre><code>$ osbx create-project
+</code></pre>
+<p>This will ask you some information to complete to generate your new osbx
+project! Answer the questions, also choose generate base component if you're
+not familiar with osbx yet. Your command prompt should look like this after
+filling up all the information:</p>
+<center><img src="https://i.imgur.com/lVKC8s7.png" /></center>
+<p>The last question will ask you to choose the beatmap folder, copy the direct
+link to your beatmap folder where you want to generate your storyboard.</p>
+<p>After his work done, you should be able to see your new osbx project folder
+created, congratulations!</p>
+<p>You can now, open the folder with <code>cd [project-name]</code> and run the command
+<code>npm run storyboard</code>. If everything is fine, you should see a message like:</p>
 <pre><code>### STARTING NEW BUILD ###
 🟢 [Main]: Component successfully built!
 
 Storyboard successfully generated! [11ms] 🎍
 </code></pre>
-<p>If it's the case, you're ready to create your storyboard!</p>
-<h4 id="next-step---a-hrefosbxinstallationhtmlosbx-conceptsa"><a class="header" href="#next-step---a-hrefosbxinstallationhtmlosbx-conceptsa">Next step -&gt; <a href="osbx/installation.html">OSBX Concepts</a></a></h4>
+<p>If it's the case, you're now ready to create your first storyboard using
+<code>osbx</code>!</p>
 <h2 id="manual-installation-not-recommended"><a class="header" href="#manual-installation-not-recommended">Manual installation (not recommended)</a></h2>
-<p>If you want to create an osbx project with your own project structure it's possible by just installing the osbx package in a new created folder. You can create your own plugin &amp; component class containing the following structure:</p>
+<p>If you want to create an osbx project with your own project structure, it's
+possible by just installing the osbx package in a new created folder. You can
+create your own plugin &amp; component class containing the following structure:</p>
 <pre><code class="language-ts">// PLUGIN FILE
 import Plugin from &quot;osbx/lib/core/plugin&quot;;
 
 class osbx_core extends Plugin {
     plugin_function() {
-        // Code ...
+        // ...
     }
 }
 
@@ -202,11 +234,14 @@ import Component from &quot;osbx/lib/core/component&quot;;
 
 export default class Main extends Component {
     public Generate() {
-        
+        // ...
     }
 }
 </code></pre>
-<p>With these both files, you can add a main.ts file which will use the function Generator::MakeStoryboard() and load a component array in the parameters.</p>
+<p>You will see later what plugins and components are, for now, just copy the
+content of these files.</p>
+<p>With these both files, you can add a main.ts file which will use the function
+Generator::MakeStoryboard() and load a component array in the parameters.</p>
 <pre><code class="language-ts">// main.ts file
 import package_file = require(&quot;./package.json&quot;);
 import Generator from &quot;osbx/lib/core/generator&quot;;
@@ -228,80 +263,227 @@ const COMPONENTS = [
 
 Generator.MakeStoryboard(COMPONENTS, package_file.config.beatmap_path, start_time);
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="osbx-concepts"><a class="header" href="#osbx-concepts">OSBX Concepts</a></h1>
-<p>Here is the documentation about the core concepts and technical specifications of OSBX. I highly recommend following the <a href="osbx/concepts.html">OSB File extension</a> guide to understand this page with more ease, the OSB guide is focusing on the .osb file structure to help you understand how does osu storyboards works. Consider this as a &quot;global&quot; tutorial page.</p>
-<h2 id="introduction-to-osbx-a-bit-of-history"><a class="header" href="#introduction-to-osbx-a-bit-of-history">Introduction to OSBX (A bit of history)</a></h2>
-<p>So you've installed OSBX on your computer and now you are ready to create the future great storyboard of osu! But before that, i'd like to explain you the core idea behind OSBX and its history. I've been using <a href="osbx/storybrew">https://github.com/Damnae/storybrew</a> since the beginning of my storyboarding career, it's a powerful tool to create storyboards and probably way better than osbx. I loved using it for making my projects but for me it's time to move forward and create my own tool to make storyboards.</p>
+<p>You're now ready to get started!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="osbx-concepts"><a class="header" href="#osbx-concepts">osbx concepts</a></h1>
+<p>Here is the documentation about the core concepts and technical specifications
+of osbx. I highly recommend following the <a href="https://wiki.osbx.org/storyboard/">.osb file
+format</a> guide to understand this page with
+more ease, the osb guide is focusing on the .osb file format to help you
+understand how does osu storyboards works. Consider this as a &quot;global&quot; tutorial
+page.</p>
+<p>Once you're comfortable with the .osb file format, you can get started on your
+osbx journey.</p>
+<h2 id="introduction-to-osbx-a-bit-of-history"><a class="header" href="#introduction-to-osbx-a-bit-of-history">Introduction to osbx (A bit of history)</a></h2>
+<p>So, you just installed osbx on your computer and now you are ready to create
+the next revolutionary storyboard osu! has ever seen? Before that, I'd like to
+explain you the core idea behind osbx and its history. I've been personally
+using <a href="https://github.com/Damnae/storybrew">storybrew</a> since the beginning of
+my storyboarding career, it's a powerful tool to create storyboards and
+probably better than osbx at its current state. I loved using it for making my
+projects, but for me it's time to move forward and create my own tool to
+generate storyboards.</p>
 <p>There is 2 main reasons why I decided to create my own tool:</p>
 <ul>
-<li>On April 2021 I've entirely switched my computer Operating systems from Windows to Linux, and unfortunately, storybrew wasn't running on Linux, even with some wine configurations.</li>
-<li>Even with all the projects made with storybrew, I always felt like it was missing a huge thing.. The forced structure of it made the creation of bigger projects very difficult to maintain, and the collaboration with other people can become quickly very messy and not comfortable to work with. As an example, Alexithymia, the project made with tochi was a real challenge to maintain and not break because all the code involved and not properly structured.</li>
+<li>On April 2021 I've entirely switched my computer Operating systems from
+Windows to Linux, and unfortunately, storybrew cannot running on Linux, even
+with Wine.</li>
+<li>Despite all of the great projects made with storybrew, I always felt like it
+was missing a huge thing: the forced structure of it made the creation of
+bigger projects very difficult to maintain, and the collaboration with other
+people can become quickly very messy and not comfortable to work with. As an
+example, Alexithymia, the project I made with -Tochi was a real challenge to
+maintain and not break because all the code involved and not properly
+structured.</li>
 </ul>
-<p>With these 2 ideas in mind, my objective was fixed. My requirements are a tool that can run on every platforms and that is focusing his conception on collaboration. Which unlocked a third point, that I've discussed with Asperatus(Zerss) for a while. Creating a sort of &quot;package&quot; thing to share scripts for osbx, that could work like npm, allowing people to publish their modules with others, and also download modules made by the community. I believe in this idea because it brings up great links between a community.</p>
-<p>Enough of &quot;blablabla&quot; let's now jump into the core of osbx.</p>
+<p>With these 2 ideas in mind, my objective was fixed. My requirements are a tool
+that can run on every platforms and that is focusing his conception on
+collaboration and scalability. Which unlocked a third point that I have
+discussed with Asperatus (Zerss) for a while: creating a package manager to
+share scripts for osbx, that could work like npm, allowing people to publish
+their modules with others, and also download modules made by the community. I
+believe in this idea because it brings up great links between the community.</p>
+<p>Enough of chit chat, let's now jump into the core of osbx.</p>
 <h2 id="global-structure"><a class="header" href="#global-structure">Global structure</a></h2>
-<p><img src="https://i.imgur.com/wqpc58E.png" alt="" /></p>
-<p>Here is the main pattern behind osbx generation system. The generator is what you use in the storyboard.ts file, it simply takes a group of components, and render them in the .osb file. A component is just something that store all the sprites data that comes from the plugins.</p>
+<p>Here is the main pattern behind osbx's generation system. The generator is what
+you use in the storyboard.ts file, it simply takes a group of components, and
+render them in the .osb file. A component is just something that store all the
+sprites data that comes from the plugins.</p>
+<center>
+<img src="https://cdn.discordapp.com/attachments/414542714365935626/879818150508634152/unknown.png" />
+</center>
 <blockquote>
 <p>Why this specific structure?</p>
 </blockquote>
-<p>This structure as been made with the collaboration in mind and a way to have sort of &quot;extensibility&quot; for storyboard projects, as an example, you can code a background effect in a plugin, and then use in in any component you want in the future, and a component can be simply a section of the map. So if you create a Background effect, you can add it to the Introduction, but also in the Main lead of the song without any problems.
-And for the collaborative side, you can for example, code your plugin on your side, then merge it with your mate that developed another plugin into your common components.</p>
+<p>This structure as been made with the idea of collaboration in mind and a way to
+have sort of &quot;extensibility&quot; for storyboard projects, for instance, you can
+program a background effect in a plugin, and then use in in any component you
+want in the future, and a component can be simply a section of the map. So if
+you create a Background effect, you can add it to the Introduction, but also in
+the Main lead of the song without any problems.</p>
+<p>And for the collaborative side, you can for example, code your plugin on your
+side, then merge it with your mate that developed another plugin into your
+common components. Since the storyboard is splitted into different parts, there
+can't be conflicts while merging your project with your collaborator's.</p>
 <h2 id="components"><a class="header" href="#components">Components</a></h2>
+<p>WIP</p>
 <h2 id="plugins"><a class="header" href="#plugins">Plugins</a></h2>
+<p>WIP</p>
 <div style="break-before: page; page-break-before: always;"></div><p>WIP</p>
 <div style="break-before: page; page-break-before: always;"></div><p>WIP</p>
 <div style="break-before: page; page-break-before: always;"></div><p>Let's take a look at how storyboards are working.</p>
 <div style="break-before: page; page-break-before: always;"></div><p>WIP</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="storyboarding-in-general"><a class="header" href="#storyboarding-in-general">STORYBOARDING IN GENERAL</a></h1>
-<iframe width="100%" height="425" src="https://www.youtube.com/embed/EJl4u-08VoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<h2 id="osu-design-tab--osb-file-structure"><a class="header" href="#osu-design-tab--osb-file-structure">OSU DESIGN TAB &amp; OSB FILE STRUCTURE</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="storyboarding-in-general"><a class="header" href="#storyboarding-in-general">Storyboarding in general</a></h1>
+<iframe width="100%" height="425"
+src="https://www.youtube.com/embed/EJl4u-08VoI" title="YouTube video player"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 id="osu-design-tab-and-the-osb-file-structure"><a class="header" href="#osu-design-tab-and-the-osb-file-structure">osu! design tab and the .osb file structure</a></h2>
 <hr />
-<p>If you've used the beatmap editor, you've probably noticed that osu! uses a tool which is commonly called the &quot;design tab&quot; that can be used to create storyboards directly in your editor. This is the most known technique and probably, the easiest to create osu storyboards.. This is why I think, this is the most powerful tool to learn storyboard basics and fundamentals before jumping into more complicated frameworks such as osbx or storybrew.</p>
-<p>Some people might think using the design tab is a bad solution to get into the vaste world of storyboarding, but i'm not totally agreed with that opinion since for &quot;non-programmers&quot; directly jumping into a complexe programming environment using libraries and advanced coding technique, can be a really difficult challenge. That is now said, let's get into that important chapter together!</p>
-<h3 id="introduction"><a class="header" href="#introduction">INTRODUCTION</a></h3>
+<p>If you've used the beatmap editor, you've probably noticed that osu! uses a
+tool which is commonly called the &quot;design tab&quot; that can be used to create
+storyboards directly in your editor. This is the most popular technique and
+probably, the easiest way to create osu! storyboards. This is why I think, this
+is the most powerful tool to learn storyboard basics and fundamentals before
+jumping into more complicated frameworks such as osbx or storybrew.</p>
+<p>Some people might think using the design tab is a bad solution to get into the
+vaste world of storyboarding, but I don't totally agree with that opinion
+since, for people that aren't comfortable with programming, jumping directly
+into a complex programming environment using libraries and advanced coding
+techniques can be a really difficult challenge. Now that it has been said,
+let's get into this important chapter together!</p>
+<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
 <hr />
-<p>Before getting started into the main subject of this chapter, let's dig a bit into the &quot;back-end&quot; structure of a storyboard. By that I mean, what exactly, is a storyboard;</p>
-<p>A storyboard, is simply a bunch of <strong>images</strong> (commonly called <strong>Sprite</strong>) that have <strong>parameters</strong>, and a parameter is a given value of a <strong>Type</strong> at a specific <strong>Time</strong>. So for example we have the most basic parameter &quot;Fade&quot; that have a value going from 0 to 1, for example:</p>
-<p><code>at 1000ms of the osu beatmap: give the value 0.6 to my sprite.</code></p>
-<p>But then.. how does the animation work? Pretty simple, in storyboarding you never like, asign a values using more than 2 keyframes. Which means an animation is from a point A to a point B, there is not calcultation or whatever thing between 3 points like a bezier would be doing for an osu curved slider. It's only from <strong>A to B</strong>. The process that is calcultating a value between 2 points is called a <strong>Tween</strong>, this is a very common way to create animation in general, in after effect, or many game User interfaces. So how does the tweening process work?</p>
+<p>Before getting started into the main subject of this chapter, let's dig a bit
+into the back-end structure of a storyboard. By that I mean, what exactly,
+defines a storyboard.</p>
+<p>A storyboard, is simply a bunch of <strong>images</strong> (commonly called <strong>Sprite</strong>) that
+have a collection of <strong>parameters</strong>.</p>
+<p>Parameters are defined by the <strong>type</strong> of the parameter (the most common ones
+are <code>Move</code>, <code>Scale</code> and <code>Fade</code>), the <strong>timestamps</strong> at which the parameters
+takes effect (expressed in milliseconds) and the <strong>values</strong> given to the
+parameter.</p>
+<p>Let's take a simple example: let's say we have a sprite and we want to give it
+a parameter. We want to create a <code>Fade</code> parameter (that's the <em>type</em> of the
+parameter). The values to the given <code>Fade</code> parameter range between 0.0 (0%) and
+1.0 (100%). We could, for instance, create this parameter:</p>
+<p><code>At 1000ms of the osu! beatmap: fade my sprite with the value 0.6</code></p>
+<p>But then, how does one create an animation? That's actually pretty simple: in
+storyboarding, you never assign a values using more than 2 <strong>keyframes</strong>. Which
+means an animation is from a point A to a point B, there is not calcultation or
+whatever thing between 3 points like a bezier would be doing for an osu! curved
+slider. It's only from <strong>point A to point B</strong>, period. The process that is
+calcultating a value between 2 points is called a <strong>tween</strong>, this is a very
+common way to create animation in general, in After Effect, or many game user
+interfaces. So how does the tweening process work?</p>
 <pre><code>[Value 1]                   [Value 2]
 [Time  1] ---- [TWEEN] ---- [Time  2]
 [       ]                   [       ]
 </code></pre>
-<p>A tween then is just something that is behing calculated automatically <strong>between</strong> 2 values.</p>
-<p>We can asign few different types of parameters to a sprite, every of them are literally easy to understand, except for the &quot;Vecotr Scale&quot; which is basically a scale on different axis.</p>
+<p>A tween then is just something that is behing calculated automatically
+<strong>between</strong> 2 values.</p>
+<p>We can assign few different types of parameters to a sprite, every of them are
+literally easy to understand, except for the &quot;Vector Scale&quot; which is basically
+a scale on two different axis.</p>
 <p><img src="https://i.imgur.com/x97TCFe.png" alt="Sprite parameters" /></p>
-<p>In osu a parameter is called &quot;Transformation&quot;, but we just use the word parameters in the community because it sounds more convinient programmatically.</p>
-<p>It's also important to note, that a tween only happen between 2 values of the same type, for example you can't tween from a Type A that is not the same than a Type B. If the first value type is a Fade, the second one has to be a Fade.</p>
-<p>Every sprite of a storyboard is as a layer group asigned to it. Each layer group is rendered differently while playing the map. There is 2 main layer group that are rendered the same way, it's the background, and the foreground. Those 2 are the &quot;Default&quot; layer groups that simply render a sprite without anything else involved. The Fail and Pass group, are used to show something depending on the player performance, if he fails a section, the fail layer gonna show, otherwise, the pass will be shown. The last layer group is the Overlay, this one is kinda specific, it does work like the Foreground except, every object will be displayed on top of the osu map objects.</p>
-<p>The order of the sprites in the layer groups is very important because this is what decide if a sprite is on top of another. The lower a sprite is in the hierarchy, the nearest it's gonna be from the user.</p>
+<p>In osu!, a parameter is called &quot;Transformation&quot;, but we just use the word
+parameters in the community because it sounds more convinient programmatically.</p>
+<p>It's also important to note that a tween only happen between 2 values of the
+same type, for example you can't tween from a type A that is not the same than
+a type B. If the first value type is a <code>Fade</code>, the second one is a <code>Fade</code>.</p>
+<p>Every sprite of a storyboard has a <strong>layer</strong> group assigned to it. Each layer
+group is rendered differently while playing the map. There are two main layer
+groups that are rendered the same way, it's the <code>Background</code>, and the
+<code>Foreground</code>. Those two are the &quot;default&quot; layer groups that simply render a
+sprite without anything else involved. The <code>Fail</code> and <code>Pass</code> group are used to
+show something depending on the player performance, if he fails a section, the
+<code>Fail</code> layer is going to show, otherwise, the <code>Pass</code> will be shown. The last
+layer group is the <code>Overlay</code>, this one is kinda specific, it does work like the
+<code>Foreground</code> except, every object will be displayed on top of the osu! map
+hitobjects.</p>
+<p>The order of the sprites in the layer groups is very important because this is
+what decide if a sprite is on top of another. The lower a sprite is in the
+hierarchy, the nearest it's gonna be from the user.</p>
 <p><img src="https://i.imgur.com/szIYKMd.png" alt="Layer groups" /></p>
-<h3 id="design-tab"><a class="header" href="#design-tab">DESIGN TAB</a></h3>
+<h3 id="the-design-tab"><a class="header" href="#the-design-tab">The design tab</a></h3>
 <hr />
-<p>If you ever used a tool like adobe premiere / after effect or even flash, you might find some similarities with osu built in storyboard editor. This tool will help you a lot understanding the core principes of osu! storyboarding. It uses what is called a &quot;<strong>timeline</strong>&quot; that is offering you a clear and easy to use way to assign actions to Sprites.</p>
+<p>If you ever used a tool like Premiere Pro, After Effect or even Flash, you
+might find some similarities with osu!'s built-in storyboard editor. This tool
+will help you a lot understand the core principles of osu! storyboarding. It
+uses what is called a &quot;<strong>timeline</strong>&quot; that is offering you a clear and easy to
+use way to assign actions to Sprites.</p>
 <p><img src="https://i.imgur.com/6BWgf8Y.png" alt="Example of the design tab timeline" /></p>
-<p>To add a new sprite into your storyboard, click on the &quot;Sprite library&quot; button, it'll show up a menu which contains every image file existing in your beatmap folder. You can then, pick up any sprite you want from that menu to add it into your storyboard!</p>
+<p>To add a new sprite into your storyboard, click on the &quot;Sprite Library&quot; button,
+it'll show up a menu which contains every image file existing in your beatmap
+folder. You can then, pick up any sprite you want from that menu to add it into
+your storyboard!</p>
 <p><img src="https://i.imgur.com/AxV1GLu.png" alt="Sprite library menu" /></p>
-<p>Once added, the sprite will only be shown at the exact time you were at when you've opened the Sprite library menu. If you scroll with your mouse, you'll notice that the sprite not longer appear, it's because when you add a sprite in your storyboard, it simply create a Move parameter at the time you were at. If you save your beatmap, you'll see a .osb file appearing in the beatmap folder, this is where every data of the storyboard is stored, it works similary to a .osu file.</p>
-<p>In that file you can see that some line are already present. The most important ones are the Sprite one and the one that is starting with a &quot;M&quot;. You can now realize that effectively, osu have created a new Sprite, and give it the &quot;M&quot; parameter which is a move, that is place on the time &quot;140580&quot; (in my case).</p>
-<p>That is helping us realize that the .osb file is simply.. a description script of our storyboard, everything that is in the .osb is the storyboard of our <strong>mapset</strong>.</p>
+<p>Once it's added, the sprite will only be shown at the exact time you were at
+when you've opened the Sprite Library menu. If you scroll with your mouse,
+you'll notice that the sprite will disappear. It's because when you add a
+sprite in your storyboard, it simply create a <code>Move</code> parameter at the time you
+were at.</p>
+<p>If you save your beatmap, you'll see a .osb file appearing in the
+beatmap folder, this is where every data of the storyboard is stored, it works
+similary to a .osu file.</p>
+<p>In that file, you can see that some lines are already present. The most
+important ones are the Sprite one and the line that follows starting with a
+&quot;M&quot;. You can now realize that, in fact, osu! have created a new Sprite, and
+give it the &quot;M&quot; parameter which is a Move, that is place on a certain timestamp
+(140580 in my case).</p>
+<p>That is helping us realize that the .osb file is simply a script that describes
+our storyboard.</p>
+<p><em>Example of what you can find in your .osb file so far</em></p>
 <pre><code>Sprite,Foreground,Centre,&quot;bg.png&quot;,320,240
  M,0,140580,,320,240
 </code></pre>
-<p>Now, if we want to animate that new Sprite freshly added, let's go back to the osu editor and see how does that work. First of all, select the sprite in the Layer group menu (when a sprite is selected you see its text in bold), then, select the &quot;Move&quot; transformation from the left side menu of the editor. Finally scroll a bit further from the first position of the sprite, and then, click on the &quot;+&quot; button located under the timeline. You'll notice a green segment being generated, this segment is what we've called &quot;tween&quot; just right before.</p>
+<p>Now, if we want to animate that new Sprite, let's head back to the osu! editor
+and see how does that work. First of all, select the sprite in the layer group
+menu (when a sprite is selected you see its text in bold), then, select the
+&quot;Move&quot; transformation from the left side menu of the editor. Finally scroll a
+bit further from the first position of the sprite, and then, click on the &quot;+&quot;
+button located under the timeline. You'll notice a green segment being
+generated, this segment is what we've called &quot;tween&quot; just right before.</p>
 <p><img src="https://i.imgur.com/VqUXtMB.png" alt="" /></p>
 <blockquote>
-<p>But we've placed another Move parameter, why does my Sprite doesn't do anything???</p>
+<p>But we've placed another Move parameter, why does my Sprite doesn't do
+anything???</p>
 </blockquote>
-<p>You're right! We've placed another movement keyframe, but it's not moving, because by just clicking on the &quot;+&quot; button, it simply add a keyframe with the same value of the previous one. Which means if our first keyframe position was (320x,240y), the new keyframe added will be exactly that same value. But don't worry, we can now change that value to make our Sprite move like we want! To do so, use the right arrow (aside of the + and - buttons) until you're placed on the last keyframe, then just click, and drag the image at the position you want. If you now scoll a bit, your Sprite should move from the first keyframe to the second one, yay!</p>
-<p>You can of course, choose to remove the tween between two keyframes, that can be sometime usefull if you don't want osu to calculate an animation from a time A to B and simply want it to apply a parameter to your sprite at a specific time, and snap to its value without tweening from the previous value.</p>
-<p>I invite you now, to test out each different parameters that can be used in the design tab, to understand how all of these a working. Also, be careful of always moving your Sprite with a drag while your editor state is <strong>paused</strong>, otherwise, the editor will place a LOT of keyframes and it can be a pain to ctrl-z them sometimes.</p>
-<p>All of that being said, you should have an overview on how does the design tab work for the very basics. I'll talk about easings and origins in details in the next chapter, but now, let's look a bit how does the osb language work.</p>
-<h3 id="osb-language"><a class="header" href="#osb-language">OSB LANGUAGE</a></h3>
+<p>You're right! We've placed another movement keyframe, but it's not moving,
+because by just clicking on the &quot;+&quot; button, it simply add a keyframe with the
+same value of the previous one. Which means if our first keyframe position was
+(320x,240y), the new keyframe added will be exactly that same value. But don't
+worry, we can now change that value to make our Sprite move like we want! To do
+so, use the right arrow (aside of the + and - buttons) until you're placed on
+the last keyframe, then just click, and drag the image at the position you
+want. If you now scoll a bit, your Sprite should move from the first keyframe
+to the second one, congratulations!</p>
+<p>You can of course choose to remove the tween between two keyframes. That can be
+sometime useful if you don't want osu! to calculate an animation from a time A
+to B and simply want it to apply a parameter to your sprite at a specific time,
+and snap to its value without tweening from the previous value.</p>
+<p>I suggest you now to test out each different parameters that can be used in the
+design tab to understand how all of these a working. Also, be careful of always
+moving your Sprite with a drag while your editor state is <strong>paused</strong>,
+otherwise, the editor will place a LOT of keyframes and it can be a pain to
+Ctrl-Z them sometimes.</p>
+<p>All of that being said, you should have an overview on how does the design tab
+work for the very basics. I'll talk about easings and origins in details in the
+next chapter, but now, let's look a look at how does the .osb language work.</p>
+<h3 id="the-osb-language"><a class="header" href="#the-osb-language">The .osb language</a></h3>
 <hr />
-<p>The .osb file is what the .osu file is for beatmaps, but for storyboards. It contains all the data of the <strong>mapset</strong> storyboard. You've been propably wondering why I'm talking about the mapset. It's because there is multiple ways to generate data for an osu storyboard. The first one, that is the most common is generating the mapset storyboard data which is ONLY stored in the .osb file of the beatmap folder. The other possibility is using the .osu file to add your storyboard data into it, this is what we call &quot;difficulty&quot; storyboard.</p>
-<p>Most of the time, we're using the difficulty storyboard data to generate diff. specific storyboards (when you have sprites on osu hitobject for example). I don't recommend you using the diff. specific for now, because it may cause you some troubles and bad optimization issues (duplicated storyboard data), but it's an important concept to understand.</p>
+<p>The .osb file is what the .osu file is for beatmaps, but for storyboards. It
+contains all the data of the <strong>mapset</strong> storyboard. You've been propably
+wondering why I'm talking about the mapset. It's because there are multiple
+ways to generate data for an osu! storyboard. The first one --that is the most
+common-- is generating the mapset storyboard data which is ONLY stored in the
+.osb file of the beatmap folder. The other possibility is using the .osu file
+to add your storyboard data into it, this is what we call &quot;difficulty&quot;
+storyboard.</p>
+<p>Most of the time, we're using the difficulty storyboard data to generate
+difficulty-specific storyboards (when you have sprites on osu! hitobject for
+example). I don't recommend you using the difficulty-specific for now, because
+it may cause you some troubles and bad optimization issues (duplicated
+storyboard data), but it's an important concept to understand.</p>
 <p>Let's make a quick analysis of a fresh created .osb file:</p>
 <pre><code class="language-ts">[Events]
 //Background and Video events
@@ -312,10 +494,20 @@ And for the collaborative side, you can for example, code your plugin on your si
 //Storyboard Layer 4 (Overlay)
 //Storyboard Sound Samples
 </code></pre>
-<p>Nothing crazy is happening there, an osb file simply have to define an [Events] and then you'll have few comments used for layer groups, those are automatically generated by osu. You'll notice that there is 2 more layers that we didn't discuss about early on: </p>
-<p><strong>Background &amp; Video events</strong>: A group that is used to handle base background information &amp; video if there is one. Most of the time this is setup in the .osu difficulty file.</p>
-<p><strong>Sound samples</strong>: This group is used for storyboard hitound samples, because you can use hitsound in your storyboards, but I personnally don't recommend this very often for some reasons..</p>
-<p>Enough of analysis, let's now create something! Creating a sprite and make it move only using the .osb file is a good start point to understand properly how does that work. First of all, let's open up our recent osb file from the last beatmap, it should look like that:</p>
+<p>Nothing crazy is happening there, an osb file simply have to define an [Events]
+and then you'll have few comments used for layer groups, those are
+automatically generated by osu!. You'll notice that there are two more layers
+that we didn't discuss about early on:</p>
+<p><strong>Background &amp; Video events</strong>: A group that is used to handle base background
+information &amp; video if there is one. Most of the time this is setup in the .osu
+difficulty file.</p>
+<p><strong>Sound samples</strong>: This group is used for storyboard hitound samples, because
+you can use hitsound in your storyboards, but I personnally don't recommend
+this for various reasons.</p>
+<p>Enough of analysis, let's now create something! Creating a sprite and make it
+move only using the .osb file is a good start point to understand properly how
+does that work. First of all, let's open up our recent osb file from the last
+beatmap, it should look like that:</p>
 <pre><code class="language-ts">[Events]
 //Background and Video events
 //Storyboard Layer 0 (Background)
@@ -327,47 +519,90 @@ Sprite,Foreground,Centre,&quot;bg.png&quot;,320,240
 //Storyboard Layer 4 (Overlay)
 //Storyboard Sound Samples
 </code></pre>
-<p>We can remove the M line to only have <code>Sprite,Foreground,Centre,&quot;bg.png&quot;,320,240</code> under the Foreground layer group, and let's analysis that specific line. Here is how osu read that:</p>
+<p>We can remove the M line to only have
+<code>Sprite,Foreground,Centre,&quot;bg.png&quot;,320,240</code> under the Foreground layer group,
+and let's analyze that specific line. Here is how osu! read that:</p>
 <pre><code class="language-ts">[Sprite | Foreground | Centre | &quot;bg.png&quot; |    320     |     240   ]
 [ Type  | LayerGroup | Origin |   Path   | Position_X | Position_Y]
 </code></pre>
-<p>It's pretty easy right? Nothing really different from the design tab thing. But what osb file utily really is, is that you can specify very precise values and it avoid a lot of headaches while you are using a lot of Sprites in your storyboard. It's in my opinion easier to make something clean using the .osb file rather than using the design tab.</p>
-<p>Ok let's try to add something to that sprite now!</p>
+<p>It's pretty easy right? Nothing really different from the design tab. But what
+.osb files usefulness really is, is that you can specify very precise values
+and avoid a lot of headaches while you are using a lot of Sprites in your
+storyboard. It's, in my opinion, easier to make something clean using the .osb
+file rather than using the design tab.</p>
+<p>Okay, let's try to add something to that sprite now!</p>
 <pre><code class="language-ts">Sprite,Foreground,Centre,&quot;bg.png&quot;,320,240
 _F,0,0,10000,0,1
 </code></pre>
-<p><em>the underscore is a space character, it's just an easier way for you to read the code</em></p>
-<p>This line we've added is a Fade parameter, that you're now probably familiar with after using the design tab a bit. What we learn is that every parameters from the design tab options is usable in the .osb file naturally. What that line does then? It's simply add a Fade to our sprite that start at 0ms with a value of 0 and end at 10000ms with a value of 1. Here's how osu read that line:</p>
+<p><em>the underscore is a space character, it's just an easier way for you to read
+the code</em></p>
+<p>The line we've added is a <code>Fade</code> parameter, you're now probably familiar with
+it now that we've used the design tab a bit. What we learn here is that every
+parameters from the design tab options is usable in the .osb file naturally.
+What does that line do then? It's simply add a <code>Fade</code> to our sprite that start
+at 0ms with a value of 0 and end at 10000ms with a value of 1. Here's how osu!
+reads that line:</p>
 <pre><code class="language-ts">[    F     |    0   |     0     |  10000  |      0     |     1   ]
 [Parameter | Easing | StartTime | EndTime | StartValue | EndValue]
 </code></pre>
-<p>Still following? Yes I understand it might be kinda weird to understand at a first time, but don't worry, you will quickly get used to this way of creating storyboards! You can find a list of every parameters and values in the <a href="https://osu.ppy.sh/wiki/en/Storyboard_Scripting/Commands#basic-commands">official osu!wiki</a> (I recommend you reading that wiki aside of this one to understand concepts).</p>
-<p>Now, you can try to create some cool little animations using the .osb language and the osu!wiki. Before moving to the next chapter, I'll like to give you some little exercices to get used to the basics of storyboarding, you can use .osb and design tab, use what fit the most with your needs and preferences!</p>
-<h3 id="exercices"><a class="header" href="#exercices">EXERCICES</a></h3>
+<p>Still following? I understand it might be a bit overwhelming to understand at a
+first glance, but fear not! You will quickly get used to this way of creating
+storyboards! You can find a list of every parameters and values in the
+<a href="https://osu.ppy.sh/wiki/en/Storyboard_Scripting/Commands#basic-commands">official
+osu!wiki</a>
+(I recommend you reading that wiki aside of this one to understand concepts)</p>
+<p>Now, you can try to create some cool little animations using the .osb language
+and the osu!wiki. Before moving to the next chapter, I'd like to give you some
+little exercices to get used to the basics of storyboarding, you can use .osb
+and design tab, use what fit the most with your needs and preferences!</p>
+<h3 id="exercices"><a class="header" href="#exercices">Exercices</a></h3>
 <hr />
 <ol>
 <li>
-<p>Generate 3 Sprites, One should move, the second one should fade out, and the last one scale down to 0, the 3 sprites have to do their actions from 0ms to 10000ms.</p>
+<p>Generate 3 Sprites, One should move, the second one should fade out, and the
+last one scale down to 0, the 3 sprites have to do their actions from 0ms to
+10000ms.</p>
 </li>
 <li>
-<p>Generate a sprite, make it slowly move from bottom to top, and add a fade out to it.</p>
+<p>Generate a sprite, make it slowly move from bottom to top, and add a fade
+out to it.</p>
 </li>
 <li>
-<p>Generate another background behind your map, make it scale properly to fit the playfield, and move slowly from the start of the map to the end. The background should also fade in at the beginning, and fade out at the end.</p>
+<p>Generate another background behind your map, make it scale properly to fit
+the playfield, and move slowly from the start of the map to the end. The
+background should also fade in at the beginning, and fade out at the end.</p>
 </li>
 </ol>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="storyboarding-in-general-1"><a class="header" href="#storyboarding-in-general-1">STORYBOARDING IN GENERAL</a></h1>
-<h2 id="advanced-osb-techniques"><a class="header" href="#advanced-osb-techniques">ADVANCED OSB TECHNIQUES</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="storyboarding-in-general-1"><a class="header" href="#storyboarding-in-general-1">Storyboarding in general</a></h1>
+<h2 id="advanced-storyboard-techniques"><a class="header" href="#advanced-storyboard-techniques">Advanced storyboard techniques</a></h2>
 <hr />
-<p>In this chapter I'll go a bit deeper into the osb file structure by presenting you the &quot;hidden&quot; advanced techniques of storyboarding which can be really helpful improving your projects and make them more enjoyable to watch.</p>
-<p>I'm gonna first explain your the concepts of <strong>Easings</strong>, <strong>Animations</strong>, <strong>Additive</strong> and <strong>Loops</strong> which are 3 pillars of the advanced storyboarding world.</p>
-<h3 id="easings"><a class="header" href="#easings">EASINGS</a></h3>
+<p>In this chapter I'll go a bit deeper into the osb file structure by presenting
+you the &quot;hidden&quot; advanced techniques of storyboarding which can be really
+helpful improving your projects and make them more enjoyable to watch.</p>
+<p>I'm gonna first explain your the concepts of <strong>Easings</strong>, <strong>Animations</strong>,
+<strong>Additive</strong> and <strong>Loops</strong> which are four pillars of the advanced storyboarding
+world.</p>
+<h3 id="easings"><a class="header" href="#easings">Easings</a></h3>
 <hr />
-<p>Before jumping into that subject, I highly recommend you watching this video explaining the concept of easing.</p>
-<iframe width="100%" height="425" src="https://www.youtube.com/embed/AlXEzbhfZJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<p>Pretty cool right? So what we are learning in that video is that, Linear movements, aren't really natural and not offering a proper emphasis to our animations, luckily, osu implement all the easings to storyboarding! That means you can apply of the general easings to a specific parameter, this is what the first value of a sprite parameter does. Don't remember which one? </p>
-<p><code>M,0 &lt;-- This one,0,1000,320,240,300,240</code></p>
-<p>So if we change that 0 value, to the value of the easing needed, this gonna change the animation Tween method from linear to whatever easing you want. Here the list of all the easings osu uses with their ID:</p>
+<p>Before jumping into that subject, I highly recommend you watching this video
+explaining the concept of easing.</p>
+<iframe width="100%" height="425"
+src="https://www.youtube.com/embed/AlXEzbhfZJM" title="YouTube video player"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Pretty cool right? So what we are learning in that video is that linear
+movements doesn't feel natural and does not offer a proper emphasis to our
+animations, luckily, osu! implements all of the common easings to
+storyboarding! This means you can apply the general easings to a specific
+parameter: this is what the first value of a sprite parameter does. Don't
+remember which one?</p>
+<pre><code>M,0,0,1000,320,240,300,240
+  Ʌ
+  ╰─ This one!
+</code></pre>
+<p>So if we change that <code>0</code> value, to the value of the easing needed, this gonna
+change the animation Tween method from linear to whatever easing you want. Here
+the list of all the easings osu uses with their ID:</p>
 <pre><code>0 - Linear: no easing
 1 - Easing Out: the changes happen fast at first, but then slow down toward the end
 2 - Easing In: the changes happen slowly at first, but then speed up toward the end
@@ -404,44 +639,94 @@ _F,0,0,10000,0,1
 33 - Bounce Out
 34 - Bounce In/Out
 </code></pre>
-<p><em>Source: Osu!wiki</em></p>
-<p>I recommend you trying out every value to see how it affects a sprite animation process, if you also want to visualize every easings more easily before using them, you can refer to that great website <a href="https://easings.net">Easings.net</a> which list every easings an how they affect the intepolation of an object.</p>
-<p>Using easings will make your storyboard looks smoother and more appealing, but be careful, easings are also needed to be used properly.. What I mean is that bad easings usage can decrease the visual quality of a map, so be careful to choose wisely your easings! Here's few good examples made by myself:</p>
-<p><img src="https://cdn.discordapp.com/attachments/657117578464067619/657118638553169921/XcYJKl2.gif" alt="" />
-<img src="https://media.giphy.com/media/jL7gdTzqhCha29joJv/giphy.gif" alt="" />
-<img src="https://cdn.discordapp.com/attachments/657117578464067619/657118639983558656/yAinGS0-2.gif" alt="" />
-<img src="https://cdn.discordapp.com/attachments/657117578464067619/657118634472374297/dB4ahM6.gif" alt="" /></p>
-<p>In these examples I've used different easings, and even used multiples for some of these. So what I you waiting for to implement these really cool things into your next storyboard! :)</p>
-<h3 id="animations"><a class="header" href="#animations">ANIMATIONS</a></h3>
+<p><em>Source: osu!wiki</em></p>
+<p>I recommend you trying out every value to see how it affects a sprite animation
+process, if you also want to visualize every easings more easily before using
+them, you can refer to that great website <a href="https://easings.net">easings.net</a>
+which list every easings an how they affect the intepolation of an object.</p>
+<p>Using easings will make your storyboard looks smoother and more appealing, but
+be careful, easings are also needed to be used properly. What I mean is that a
+bad combination of easings can decrease the visual quality of a map, so be
+careful to choose wisely your easings! Here's few good examples I made myself:</p>
+<center>
+<img src="https://cdn.discordapp.com/attachments/657117578464067619/657118638553169921/XcYJKl2.gif"/>
+<img src="https://media.giphy.com/media/jL7gdTzqhCha29joJv/giphy.gif"/>
+<img src="https://cdn.discordapp.com/attachments/657117578464067619/657118639983558656/yAinGS0-2.gif"/>
+<img src="https://cdn.discordapp.com/attachments/657117578464067619/657118634472374297/dB4ahM6.gif"/>
+</center>
+<p>In these examples, I've used different easings, and even used multiples for some
+of these. So what are you waiting for to implement these really cool things into
+your next storyboard? :)</p>
+<h3 id="animations"><a class="header" href="#animations">Animations</a></h3>
 <hr />
-<p>Let's get back into sprite management process, I've probably told you in my last chapter, that there is 2 types of objects storyboards can handle. The first one is the basic sprite object which is just a static image rendered. The second one is the <strong>Animation</strong> object. It's multiple sprites combined together to make a single animation sprite that shows every sprites with some delay between them. It kinda works like a gif.</p>
-<p>This is not really complicated to setup, but osu! doesn't really explain it properly so here's my quick tutorial. Grab one of your favourite gif, load it to that website: <a href="https://ezgif.com/split">ezgifs.com/split</a>. You can here split up your gif into multiple images, I recommend you using a short gif for that tutorial, it's gonna be easier to manage (10-15 sprites is fine). Once you've downloaded all the images, but it in a new folder of your beatmap: something like <strong>sb/animation</strong> is good. Finally rename every sprite with a common name that end with a 0 at the end, your folder might look like that:</p>
-<pre><code>sb/animation:
-a0.jpg
-a1.jpg
-a2.jpg
-a3.jpg
+<p>Let's get back into sprite management process, I've probably told you in my
+last chapter, that there are two types of objects storyboards can handle. The
+first one is the basic sprite object which is just a static image rendered. The
+second one is the <strong>Animation</strong> object. It's a series of sprites combined
+together to make a single animation sprite that shows every sprites with some
+delay between them. It kinda works like a gif.</p>
+<p>This is not really complicated to setup, but osu! doesn't really explain it
+properly so here's my take on it. Grab one of your favourite gif, load it to
+that website: <a href="https://ezgif.com/split">ezgifs.com/split</a>. Once there, you can
+split up your gif into multiple images, I recommend you using a short gif for
+that tutorial, it's gonna be easier to manage (10-15 sprites is fine). Once
+you've downloaded all of the images, put them in a new folder of your beatmap.
+Something like <strong>sb/animation</strong> is good. Finally rename every sprite with a
+common name that end with a number at the end, your folder might look like
+that:</p>
+<pre><code>sb/animation/my_sprite0.jpg
+sb/animation/my_sprite1.jpg
+sb/animation/my_sprite2.jpg
+sb/animation/my_sprite3.jpg
 ...
-a15.jpg
+sb/animation/my_sprite15.jpg
 </code></pre>
-<p>If you then, open up your editor and try to add a new sprite from the library, you should see your animation running directly into the library, click on it to import it, add 2 movements keyframes to make it appear long enough, and there you go, your gif is now running on osu! cool right? If you want to tweak the speed playing time of your animation, you have to change the .osb file line of the animation to fit your needs</p>
+<p>If you then, open up your editor and try to add a new sprite from the library,
+you should see your animation running directly into the library, click on it to
+import it, add 2 movements keyframes to make it appear long enough, and there
+you go, your gif is now running on osu! cool right? If you want to tweak the
+speed playing time of your animation, you have to change the .osb file line of
+the animation to fit your needs</p>
 <pre><code class="language-ts">[ Animation | Foreground | Centre | &quot;sb\animation\s.jpg&quot; | 320 | 240 |        8         |            78            | LoopForever ]
 [    Type   |    Layer   | Origin |         Path         |  x  |  y  | number_of_images | delay_between_images[ms] |  loop_type  ]
 </code></pre>
-<p>Of course, animations objects inherits from a Sprite, so you can use the same parameters for an Animation that you would use for a sprite, think of it, it's just a Sprite, that is animated. Nothing else.</p>
-<h3 id="additive-rendering"><a class="header" href="#additive-rendering">ADDITIVE RENDERING</a></h3>
+<p>Of course, animations objects inherits from a Sprite, so you can use the same
+parameters for an Animation that you would use for a sprite, think of it, it's
+just a Sprite, that is animated. Nothing else.</p>
+<h3 id="additive-rendering"><a class="header" href="#additive-rendering">Additive rendering</a></h3>
 <hr />
-<p>An advanced concept which can be kinda weird to understand is the Layer blending. Osu work with 2 Layer blending techniques methods, the basic rendering process, simply take the nearest sprite and render it pixels, and nothing else, so if you place a sprite in front of another it's gonna simply show it on top of it without changing anything to these 2 sprites. But what the Additive blend mode does is that, it kind of make an &quot;addition&quot; each white values pixel color. </p>
+<p>An advanced concept which can be kind of daunting to understand is the layer
+blending. osu! works with 2 layer blending techniques methods, the basic
+rendering process, simply take the nearest sprite and render it pixels, and
+nothing else, so if you place a sprite in front of another it's gonna simply
+show it on top of it without changing anything to these 2 sprites. But what the
+<strong>additive blend mode</strong> does is that it kind of make an &quot;addition&quot; each white
+values pixel color.</p>
 <p>Here is an application of that concept in a storyboard:</p>
-<p><img src="https://media1.giphy.com/media/C9QuyaLQxMd52aLIM1/giphy.gif" alt="" /></p>
-<p>You can notice that the light looks very bright and sort of &quot;blend&quot; the images together to give a sort of halo effect. The additive blending mode can be really useful to achieve a proper blend of your sprites. It can be also used to remove the black pixels of a jpg image. Because in additive black pixels are transparent. If you are more interested in that technique, I recommend you reading this little <a href="https://en.wikipedia.org/wiki/Additive_color">wikipedia article</a> about how the additive color work.</p>
-<h3 id="loops"><a class="header" href="#loops">LOOPS</a></h3>
+<center>
+<img src="https://media1.giphy.com/media/C9QuyaLQxMd52aLIM1/giphy.gif" />
+</center>
+<p>You can notice that the light looks very bright and sort of &quot;blend&quot; the images
+together to give a sort of halo effect. The additive blending mode can be
+really useful to achieve a proper blend of your sprites. It can be also used to
+remove the black pixels of a jpg image. Because in additive black pixels are
+transparent. If you are more interested in that technique, I recommend you
+reading this <a href="https://en.wikipedia.org/wiki/Additive_color">wikipedia article</a>
+about how the additive color work.</p>
+<h3 id="loops"><a class="header" href="#loops">Loops</a></h3>
 <hr />
-<p>Last but not least topic of this chapter, and probably the more complex is the OsbLoop. A way to make some parameters repeat over a time duration, this is a difficult concept to understand because it can be missleading. </p>
+<p>Last but not least, and probably the more complex is the OsbLoop. A way to make
+some parameters repeat over a time duration, this is a difficult concept to
+understand because it can be missleading.</p>
 <blockquote>
-<p>Do not think that an OsbLoop allows you to generate lot of sprites and complex things because it is not really what you think.</p>
+<p>Do not think that an OsbLoop allows you to generate lot of sprites and
+complex things because it is not really what you think.</p>
 </blockquote>
-<p>Is what I would said to anyone being introduced to osb loops, because what it just does is repeating a specific pool of parameters for a <strong>given</strong> sprite. Take for example a quick blink effect for an image, you want it to make it quickly apear and disapear each 100 milliseconds. Here a visualization of the effect:</p>
+<p>is what I would said to anyone being introduced to osb loops, because what it
+just does is repeating a specific pool of parameters for a <strong>given</strong> sprite.
+Take for example a quick blink effect for an image, you want it to make it
+quickly apear and disapear each 100 milliseconds. Here a visualization of the
+effect:</p>
 <pre><code>Fade from 1 to 0 at 0ms to 100ms
 Fade from 1 to 0 at 100ms to 200ms
 Fade from 1 to 0 at 200ms to 300ms
@@ -456,13 +741,19 @@ _F,0,200,300,1,0
 _F,0,300,400,1,0
 ... etc
 </code></pre>
-<p>This might be perfectly fine, it's just a bunch of copy paste stuff and there you go. But it's not, for multiple reasons, first, imagine that you want to do 100 blinks.. are you really gonna copy paste 100 lines of code to achieve what you want?</p>
-<p>This is where OsbLoop take place, it allow you in few lines of code to repeat actions for a sprite. Think of the process like that:</p>
+<p>This might be perfectly fine, it's just a bunch of copy/paste and there you go.
+But it's not, for multiple reasons, first, imagine that you want to do 100
+blinks. Are you really gonna copy paste 100 lines of code to achieve what you
+want?</p>
+<p>This is where OsbLoop take place, it allow you in few lines of code to repeat
+actions for a sprite. Think of the process like that:</p>
 <pre><code>Create my sprite,
  Create a loop and repeat it 100 times
   In that loop Fade from 0 to 100 ms
 </code></pre>
-<p>So we're gonna condense 100 lines into only 2, which is pretty insane right? Let's test this out, here's the implementation on a storyboard of what we said earlier:</p>
+<p>So we're gonna condense 100 lines into only 2, which is pretty insane right?
+Let's test this out, here's the implementation on a storyboard of what we said
+earlier:</p>
 <pre><code class="language-ts">[Events]
 //Background and Video events
 //Storyboard Layer 0 (Background)
@@ -475,12 +766,29 @@ Sprite,Foreground,Centre,&quot;bg.jpg&quot;,320,240
 //Storyboard Layer 4 (Overlay)
 //Storyboard Sound Samples
 </code></pre>
-<p>We create a simple sprite object, then give it the L parameter which is a Loop, the first value of it is the &quot;Start Time&quot; and the second one is the number of time it gonna repeat. So our loop is starting at 0ms of the beatmap and loop 100 times</p>
-<p>The second line is just a Fade parameter, but here it becomes kinda complicated. The start and end value are 0 and 100, why? That is because <strong>any parameters</strong> in a loop, they startTime depends on the <strong>Loop startTime</strong> so if our Loop start at 112214ms, any 0 value of a parameter inside it gonna be 112214 exactly. And the second thing to understand is that a Loop will make another iteration at the time of every parameters inside it is <strong>Done</strong></p>
-<p>So if our Loop start at 112214, and the fade inside it end at 1000ms, it will means that the Fade will happen from 112214 to 113214, and THEN reapeat from 113214 to 114214 etc etc... until the loop count is reached. I can understand that this topic can be mindblowing at a first time, but don't worry just do some tests and you'll easily understand those.</p>
+<p>We create a simple sprite object, then give it the L parameter which is a Loop,
+the first value of it is the &quot;Start Time&quot; and the second one is the number of
+time it gonna repeat. So our loop is starting at 0ms of the beatmap and loop
+100 times</p>
+<p>The second line is just a <code>Fade</code> parameter, but here it becomes kinda
+complicated. The start and end value are 0 and 100, why? That is because <strong>any
+parameters</strong> in a loop, their start time depends on the <strong>loop's start time</strong>
+so if our Loop start at 112214ms, any 0 value of a parameter inside it gonna be
+112214 exactly. And the second thing to understand is that a <code>Loop</code> will make
+another iteration at the time of every parameters inside it is <strong>Done</strong></p>
+<p>So if our Loop start at 112214ms, and the fade inside it end at 1000ms, it will
+means that the Fade will happen from 112214 to 113214, and THEN repeat from
+113214 to 114214 etc etc... until the loop count is reached. I can understand
+that this topic can be mindblowing at a first time, but don't worry just do
+some tests and you'll easily understand those.</p>
 <hr />
-<p>This closes our complete overview of the storyboarding concepts, I hope i've been clear enough to make your understand all the possibilities of storyboarding, if you have any questions about it, do not hesitate to ask me on discord, or just write a post in the Storyboarding subforum of osu! I'm always happy to help new people getting used to storyboarding!</p>
-<p>In the next chapter i'm gonna talk about optimizations techniques, which are also an important topic in storyboarding.</p>
+<p>This closes our complete overview of the storyboarding concepts, I hope I've
+been clear enough to make your understand all the possibilities of
+storyboarding, if you have any questions about it, do not hesitate to ask me on
+discord, or just write a post in the Storyboarding subforum of osu!. I'm
+always happy to help new people getting used to storyboarding!</p>
+<p>In the next chapter I'm gonna talk about optimizations techniques, which are
+also an important topic in storyboarding.</p>
 
                     </main>
 
